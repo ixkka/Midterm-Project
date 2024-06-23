@@ -53,12 +53,14 @@
             // 
             displayTxtBox.BackColor = SystemColors.Window;
             displayTxtBox.BorderStyle = BorderStyle.FixedSingle;
-            displayTxtBox.Font = new Font("Segoe UI", 50F);
+            displayTxtBox.Font = new Font("Segoe UI", 15F);
             displayTxtBox.Location = new Point(20, 20);
+            displayTxtBox.Multiline = true;
             displayTxtBox.Name = "displayTxtBox";
             displayTxtBox.ReadOnly = true;
             displayTxtBox.Size = new Size(318, 96);
             displayTxtBox.TabIndex = 0;
+            displayTxtBox.TextAlign = HorizontalAlignment.Right;
             displayTxtBox.TextChanged += textBox1_TextChanged;
             // 
             // addBtn
