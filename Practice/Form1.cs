@@ -128,22 +128,22 @@ namespace Practice
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            displayTxtBox.Text += $" + ";
+            displayTxtBox.Text += " + ";
         }
 
         private void subtractButton_Click(object sender, EventArgs e)
         {
-            displayTxtBox.Text += $" - ";
+            displayTxtBox.Text += " - ";
         }
 
         private void multiplyBtn_Click(object sender, EventArgs e)
         {
-            displayTxtBox.Text += $" * ";
+            displayTxtBox.Text += " * ";
         }
 
         private void divideBtn_Click(object sender, EventArgs e)
         {
-            displayTxtBox.Text += $" / ";
+            displayTxtBox.Text += " / ";
         }
 
         private void equalsBtn_Click(object sender, EventArgs e)
