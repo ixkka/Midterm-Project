@@ -55,7 +55,8 @@ namespace Practice
             if (displayTxtBox.Text.Length >= 3 && displayTxtBox.Text.EndsWith(" "))
             {
                 displayTxtBox.Text = displayTxtBox.Text.Remove(displayTxtBox.Text.Length - 3);
-            } else if (displayTxtBox.Text.Length >= 1)
+            }
+            else if (displayTxtBox.Text.Length >= 1)
             {
                 displayTxtBox.Text = displayTxtBox.Text.Remove(displayTxtBox.Text.Length - 1);
             }
@@ -126,24 +127,55 @@ namespace Practice
             }
         }
 
+        private void openParenthesisBtn_Click(object sender, EventArgs e)
+        {
+            displayTxtBox.Text += "(";
+        }
+
+        private void closeParenthesisBtn_Click(object sender, EventArgs e)
+        {
+            displayTxtBox.Text += ")";
+        }
+
         private void addBtn_Click(object sender, EventArgs e)
         {
-            displayTxtBox.Text += " + ";
+            string text = displayTxtBox.Text.TrimEnd();
+
+            if (!string.IsNullOrEmpty(text) && !IsOperator(text[text.Length - 1]))
+            {
+                displayTxtBox.Text += " + ";
+            }
+
         }
 
         private void subtractButton_Click(object sender, EventArgs e)
         {
-            displayTxtBox.Text += " - ";
+            string text = displayTxtBox.Text.TrimEnd();
+
+            if (!string.IsNullOrEmpty(text) && !IsOperator(text[text.Length - 1]))
+            {
+                displayTxtBox.Text += " - ";
+            }
         }
 
         private void multiplyBtn_Click(object sender, EventArgs e)
         {
-            displayTxtBox.Text += " * ";
+            string text = displayTxtBox.Text.TrimEnd();
+
+            if (!string.IsNullOrEmpty(text) && !IsOperator(text[text.Length - 1]))
+            {
+                displayTxtBox.Text += " * ";
+            }
         }
 
         private void divideBtn_Click(object sender, EventArgs e)
         {
-            displayTxtBox.Text += " / ";
+            string text = displayTxtBox.Text.TrimEnd();
+
+            if (!string.IsNullOrEmpty(text) && !IsOperator(text[text.Length - 1]))
+            {
+                displayTxtBox.Text += " / ";
+            }
         }
 
         private void equalsBtn_Click(object sender, EventArgs e)
@@ -188,6 +220,20 @@ namespace Practice
                     double number = double.Parse(sb.ToString());
                     operandStack.Push(number);
                 }
+                else if (currentChar == '(')
+                {
+                    operatorStack.Push(currentChar);
+                    i++;
+                }
+                else if (currentChar == ')')
+                {
+                    while (operatorStack.Count > 0 && operatorStack.Peek() != '(')
+                    {
+                        ProcessOperator(operandStack, operatorStack);
+                    }
+                    operatorStack.Pop();
+                    i++;
+                }
                 else if (IsOperator(currentChar))
                 {
                     while (operatorStack.Count > 0 && Precedence(operatorStack.Peek()) >= Precedence(currentChar))
@@ -217,6 +263,7 @@ namespace Practice
                 throw new ArgumentException("Invalid expression.");
             }
         }
+
         private bool IsOperator(char c)
         {
             return c == '+' || c == '-' || c == '*' || c == '/';

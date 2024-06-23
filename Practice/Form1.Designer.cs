@@ -47,6 +47,8 @@
             nineBtn = new Button();
             clearButton = new Button();
             backspcBtn = new Button();
+            closeParenthesisBtn = new Button();
+            openParenthesisBtn = new Button();
             SuspendLayout();
             // 
             // displayTxtBox
@@ -262,11 +264,35 @@
             backspcBtn.UseVisualStyleBackColor = true;
             backspcBtn.Click += backspcBtn_Click;
             // 
+            // closeParenthesisBtn
+            // 
+            closeParenthesisBtn.Font = new Font("Segoe UI", 20F);
+            closeParenthesisBtn.Location = new Point(101, 122);
+            closeParenthesisBtn.Name = "closeParenthesisBtn";
+            closeParenthesisBtn.Size = new Size(75, 75);
+            closeParenthesisBtn.TabIndex = 21;
+            closeParenthesisBtn.Text = ")";
+            closeParenthesisBtn.UseVisualStyleBackColor = true;
+            closeParenthesisBtn.Click += closeParenthesisBtn_Click;
+            // 
+            // openParenthesisBtn
+            // 
+            openParenthesisBtn.Font = new Font("Segoe UI", 20F);
+            openParenthesisBtn.Location = new Point(20, 122);
+            openParenthesisBtn.Name = "openParenthesisBtn";
+            openParenthesisBtn.Size = new Size(75, 75);
+            openParenthesisBtn.TabIndex = 22;
+            openParenthesisBtn.Text = "(";
+            openParenthesisBtn.UseVisualStyleBackColor = true;
+            openParenthesisBtn.Click += openParenthesisBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(357, 544);
+            Controls.Add(openParenthesisBtn);
+            Controls.Add(closeParenthesisBtn);
             Controls.Add(backspcBtn);
             Controls.Add(clearButton);
             Controls.Add(nineBtn);
@@ -314,5 +340,7 @@
         private Button nineBtn;
         private Button clearButton;
         private Button backspcBtn;
+        private Button closeParenthesisBtn;
+        private Button openParenthesisBtn;
     }
 }
