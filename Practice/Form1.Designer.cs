@@ -28,232 +28,262 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            addButton = new Button();
-            subtractButton = new Button();
-            multiplyButton = new Button();
-            divideButton = new Button();
-            equalsButton = new Button();
-            zeroButton = new Button();
-            emptyButton = new Button();
-            oneButton = new Button();
-            twoButton = new Button();
-            threeButton = new Button();
-            sixButton = new Button();
-            fiveButton = new Button();
-            fourButton = new Button();
-            sevenButton = new Button();
-            eightButton = new Button();
-            nineButton = new Button();
+            displayTxtBox = new TextBox();
+            addBtn = new Button();
+            subtractBtn = new Button();
+            multiplyBtn = new Button();
+            divideBtn = new Button();
+            equalsBtn = new Button();
+            zeroBtn = new Button();
+            decimalPtBtn = new Button();
+            oneBtn = new Button();
+            twoBtn = new Button();
+            threeBtn = new Button();
+            sixBtn = new Button();
+            fiveBtn = new Button();
+            fourBtn = new Button();
+            sevenBtn = new Button();
+            eightBtn = new Button();
+            nineBtn = new Button();
             clearButton = new Button();
+            backspcBtn = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // displayTxtBox
             // 
-            textBox1.BackColor = SystemColors.ControlLightLight;
-            textBox1.Font = new Font("Segoe UI", 50F);
-            textBox1.Location = new Point(20, 20);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(318, 96);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            displayTxtBox.BackColor = SystemColors.Window;
+            displayTxtBox.BorderStyle = BorderStyle.FixedSingle;
+            displayTxtBox.Font = new Font("Segoe UI", 50F);
+            displayTxtBox.Location = new Point(20, 20);
+            displayTxtBox.Name = "displayTxtBox";
+            displayTxtBox.ReadOnly = true;
+            displayTxtBox.Size = new Size(318, 96);
+            displayTxtBox.TabIndex = 0;
+            displayTxtBox.TextChanged += textBox1_TextChanged;
             // 
-            // addButton
+            // addBtn
             // 
-            addButton.Font = new Font("Segoe UI", 20F);
-            addButton.Location = new Point(263, 446);
-            addButton.Name = "addButton";
-            addButton.Size = new Size(75, 75);
-            addButton.TabIndex = 1;
-            addButton.Text = "+";
-            addButton.UseVisualStyleBackColor = true;
-            addButton.Click += button1_Click;
+            addBtn.Font = new Font("Segoe UI", 20F);
+            addBtn.Location = new Point(263, 446);
+            addBtn.Name = "addBtn";
+            addBtn.Size = new Size(75, 75);
+            addBtn.TabIndex = 1;
+            addBtn.Text = "+";
+            addBtn.UseVisualStyleBackColor = true;
+            addBtn.Click += addBtn_Click;
             // 
-            // subtractButton
+            // subtractBtn
             // 
-            subtractButton.Font = new Font("Segoe UI", 20F);
-            subtractButton.Location = new Point(263, 365);
-            subtractButton.Name = "subtractButton";
-            subtractButton.Size = new Size(75, 75);
-            subtractButton.TabIndex = 2;
-            subtractButton.Text = "-";
-            subtractButton.UseVisualStyleBackColor = true;
-            subtractButton.Click += subtractButton_Click;
+            subtractBtn.Font = new Font("Segoe UI", 20F);
+            subtractBtn.Location = new Point(263, 365);
+            subtractBtn.Name = "subtractBtn";
+            subtractBtn.Size = new Size(75, 75);
+            subtractBtn.TabIndex = 2;
+            subtractBtn.Text = "-";
+            subtractBtn.UseVisualStyleBackColor = true;
+            subtractBtn.Click += subtractButton_Click;
             // 
-            // multiplyButton
+            // multiplyBtn
             // 
-            multiplyButton.Font = new Font("Segoe UI", 20F);
-            multiplyButton.Location = new Point(263, 284);
-            multiplyButton.Name = "multiplyButton";
-            multiplyButton.Size = new Size(75, 75);
-            multiplyButton.TabIndex = 3;
-            multiplyButton.Text = "*";
-            multiplyButton.UseVisualStyleBackColor = true;
+            multiplyBtn.Font = new Font("Segoe UI", 20F);
+            multiplyBtn.Location = new Point(263, 284);
+            multiplyBtn.Name = "multiplyBtn";
+            multiplyBtn.Size = new Size(75, 75);
+            multiplyBtn.TabIndex = 3;
+            multiplyBtn.Text = "*";
+            multiplyBtn.UseVisualStyleBackColor = true;
+            multiplyBtn.Click += multiplyBtn_Click;
             // 
-            // divideButton
+            // divideBtn
             // 
-            divideButton.Font = new Font("Segoe UI", 20F);
-            divideButton.Location = new Point(263, 203);
-            divideButton.Name = "divideButton";
-            divideButton.Size = new Size(75, 75);
-            divideButton.TabIndex = 4;
-            divideButton.Text = "/";
-            divideButton.UseVisualStyleBackColor = true;
+            divideBtn.Font = new Font("Segoe UI", 20F);
+            divideBtn.Location = new Point(263, 203);
+            divideBtn.Name = "divideBtn";
+            divideBtn.Size = new Size(75, 75);
+            divideBtn.TabIndex = 4;
+            divideBtn.Text = "/";
+            divideBtn.UseVisualStyleBackColor = true;
+            divideBtn.Click += divideBtn_Click;
             // 
-            // equalsButton
+            // equalsBtn
             // 
-            equalsButton.Font = new Font("Segoe UI", 20F);
-            equalsButton.Location = new Point(182, 446);
-            equalsButton.Name = "equalsButton";
-            equalsButton.Size = new Size(75, 75);
-            equalsButton.TabIndex = 5;
-            equalsButton.Text = "=";
-            equalsButton.UseVisualStyleBackColor = true;
+            equalsBtn.Font = new Font("Segoe UI", 20F);
+            equalsBtn.Location = new Point(182, 446);
+            equalsBtn.Name = "equalsBtn";
+            equalsBtn.Size = new Size(75, 75);
+            equalsBtn.TabIndex = 5;
+            equalsBtn.Text = "=";
+            equalsBtn.UseVisualStyleBackColor = true;
+            equalsBtn.Click += equalsBtn_Click;
             // 
-            // zeroButton
+            // zeroBtn
             // 
-            zeroButton.Font = new Font("Segoe UI", 20F);
-            zeroButton.Location = new Point(20, 446);
-            zeroButton.Name = "zeroButton";
-            zeroButton.Size = new Size(75, 75);
-            zeroButton.TabIndex = 6;
-            zeroButton.Text = "0";
-            zeroButton.UseVisualStyleBackColor = true;
+            zeroBtn.Font = new Font("Segoe UI", 20F);
+            zeroBtn.Location = new Point(20, 446);
+            zeroBtn.Name = "zeroBtn";
+            zeroBtn.Size = new Size(75, 75);
+            zeroBtn.TabIndex = 6;
+            zeroBtn.Text = "0";
+            zeroBtn.UseVisualStyleBackColor = true;
+            zeroBtn.Click += zeroBtn_Click;
             // 
-            // emptyButton
+            // decimalPtBtn
             // 
-            emptyButton.Font = new Font("Segoe UI", 20F);
-            emptyButton.Location = new Point(101, 446);
-            emptyButton.Name = "emptyButton";
-            emptyButton.Size = new Size(75, 75);
-            emptyButton.TabIndex = 7;
-            emptyButton.UseVisualStyleBackColor = true;
+            decimalPtBtn.Font = new Font("Segoe UI", 20F);
+            decimalPtBtn.Location = new Point(101, 446);
+            decimalPtBtn.Name = "decimalPtBtn";
+            decimalPtBtn.Size = new Size(75, 75);
+            decimalPtBtn.TabIndex = 7;
+            decimalPtBtn.Tag = "";
+            decimalPtBtn.Text = ".";
+            decimalPtBtn.UseVisualStyleBackColor = true;
+            decimalPtBtn.Click += decimalPtBtn_Click;
             // 
-            // oneButton
+            // oneBtn
             // 
-            oneButton.Font = new Font("Segoe UI", 20F);
-            oneButton.Location = new Point(20, 365);
-            oneButton.Name = "oneButton";
-            oneButton.Size = new Size(75, 75);
-            oneButton.TabIndex = 9;
-            oneButton.Text = "1";
-            oneButton.UseVisualStyleBackColor = true;
+            oneBtn.Font = new Font("Segoe UI", 20F);
+            oneBtn.Location = new Point(20, 365);
+            oneBtn.Name = "oneBtn";
+            oneBtn.Size = new Size(75, 75);
+            oneBtn.TabIndex = 9;
+            oneBtn.Text = "1";
+            oneBtn.UseVisualStyleBackColor = true;
+            oneBtn.Click += oneBtn_Click;
             // 
-            // twoButton
+            // twoBtn
             // 
-            twoButton.Font = new Font("Segoe UI", 20F);
-            twoButton.Location = new Point(101, 365);
-            twoButton.Name = "twoButton";
-            twoButton.Size = new Size(75, 75);
-            twoButton.TabIndex = 10;
-            twoButton.Text = "2";
-            twoButton.UseVisualStyleBackColor = true;
+            twoBtn.Font = new Font("Segoe UI", 20F);
+            twoBtn.Location = new Point(101, 365);
+            twoBtn.Name = "twoBtn";
+            twoBtn.Size = new Size(75, 75);
+            twoBtn.TabIndex = 10;
+            twoBtn.Text = "2";
+            twoBtn.UseVisualStyleBackColor = true;
+            twoBtn.Click += twoBtn_Click;
             // 
-            // threeButton
+            // threeBtn
             // 
-            threeButton.Font = new Font("Segoe UI", 20F);
-            threeButton.Location = new Point(182, 365);
-            threeButton.Name = "threeButton";
-            threeButton.Size = new Size(75, 75);
-            threeButton.TabIndex = 11;
-            threeButton.Text = "3";
-            threeButton.UseVisualStyleBackColor = true;
+            threeBtn.Font = new Font("Segoe UI", 20F);
+            threeBtn.Location = new Point(182, 365);
+            threeBtn.Name = "threeBtn";
+            threeBtn.Size = new Size(75, 75);
+            threeBtn.TabIndex = 11;
+            threeBtn.Text = "3";
+            threeBtn.UseVisualStyleBackColor = true;
+            threeBtn.Click += threeBtn_Click;
             // 
-            // sixButton
+            // sixBtn
             // 
-            sixButton.Font = new Font("Segoe UI", 20F);
-            sixButton.Location = new Point(182, 284);
-            sixButton.Name = "sixButton";
-            sixButton.Size = new Size(75, 75);
-            sixButton.TabIndex = 12;
-            sixButton.Text = "6";
-            sixButton.UseVisualStyleBackColor = true;
+            sixBtn.Font = new Font("Segoe UI", 20F);
+            sixBtn.Location = new Point(182, 284);
+            sixBtn.Name = "sixBtn";
+            sixBtn.Size = new Size(75, 75);
+            sixBtn.TabIndex = 12;
+            sixBtn.Text = "6";
+            sixBtn.UseVisualStyleBackColor = true;
+            sixBtn.Click += sixBtn_Click;
             // 
-            // fiveButton
+            // fiveBtn
             // 
-            fiveButton.Font = new Font("Segoe UI", 20F);
-            fiveButton.Location = new Point(101, 284);
-            fiveButton.Name = "fiveButton";
-            fiveButton.Size = new Size(75, 75);
-            fiveButton.TabIndex = 13;
-            fiveButton.Text = "5";
-            fiveButton.UseVisualStyleBackColor = true;
+            fiveBtn.Font = new Font("Segoe UI", 20F);
+            fiveBtn.Location = new Point(101, 284);
+            fiveBtn.Name = "fiveBtn";
+            fiveBtn.Size = new Size(75, 75);
+            fiveBtn.TabIndex = 13;
+            fiveBtn.Text = "5";
+            fiveBtn.UseVisualStyleBackColor = true;
+            fiveBtn.Click += fiveBtn_Click;
             // 
-            // fourButton
+            // fourBtn
             // 
-            fourButton.Font = new Font("Segoe UI", 20F);
-            fourButton.Location = new Point(20, 284);
-            fourButton.Name = "fourButton";
-            fourButton.Size = new Size(75, 75);
-            fourButton.TabIndex = 14;
-            fourButton.Text = "4";
-            fourButton.UseVisualStyleBackColor = true;
+            fourBtn.Font = new Font("Segoe UI", 20F);
+            fourBtn.Location = new Point(20, 284);
+            fourBtn.Name = "fourBtn";
+            fourBtn.Size = new Size(75, 75);
+            fourBtn.TabIndex = 14;
+            fourBtn.Text = "4";
+            fourBtn.UseVisualStyleBackColor = true;
+            fourBtn.Click += fourBtn_Click;
             // 
-            // sevenButton
+            // sevenBtn
             // 
-            sevenButton.Font = new Font("Segoe UI", 20F);
-            sevenButton.Location = new Point(20, 203);
-            sevenButton.Name = "sevenButton";
-            sevenButton.Size = new Size(75, 75);
-            sevenButton.TabIndex = 15;
-            sevenButton.Text = "7";
-            sevenButton.UseVisualStyleBackColor = true;
+            sevenBtn.Font = new Font("Segoe UI", 20F);
+            sevenBtn.Location = new Point(20, 203);
+            sevenBtn.Name = "sevenBtn";
+            sevenBtn.Size = new Size(75, 75);
+            sevenBtn.TabIndex = 15;
+            sevenBtn.Text = "7";
+            sevenBtn.UseVisualStyleBackColor = true;
+            sevenBtn.Click += sevenBtn_Click;
             // 
-            // eightButton
+            // eightBtn
             // 
-            eightButton.Font = new Font("Segoe UI", 20F);
-            eightButton.Location = new Point(101, 203);
-            eightButton.Name = "eightButton";
-            eightButton.Size = new Size(75, 75);
-            eightButton.TabIndex = 16;
-            eightButton.Text = "8";
-            eightButton.UseVisualStyleBackColor = true;
+            eightBtn.Font = new Font("Segoe UI", 20F);
+            eightBtn.Location = new Point(101, 203);
+            eightBtn.Name = "eightBtn";
+            eightBtn.Size = new Size(75, 75);
+            eightBtn.TabIndex = 16;
+            eightBtn.Text = "8";
+            eightBtn.UseVisualStyleBackColor = true;
+            eightBtn.Click += eightBtn_Click;
             // 
-            // nineButton
+            // nineBtn
             // 
-            nineButton.Font = new Font("Segoe UI", 20F);
-            nineButton.Location = new Point(182, 203);
-            nineButton.Name = "nineButton";
-            nineButton.Size = new Size(75, 75);
-            nineButton.TabIndex = 17;
-            nineButton.Text = "9";
-            nineButton.UseVisualStyleBackColor = true;
+            nineBtn.Font = new Font("Segoe UI", 20F);
+            nineBtn.Location = new Point(182, 203);
+            nineBtn.Name = "nineBtn";
+            nineBtn.Size = new Size(75, 75);
+            nineBtn.TabIndex = 17;
+            nineBtn.Text = "9";
+            nineBtn.UseVisualStyleBackColor = true;
+            nineBtn.Click += nineBtn_Click;
             // 
             // clearButton
             // 
             clearButton.Font = new Font("Segoe UI", 20F);
-            clearButton.Location = new Point(263, 122);
+            clearButton.Location = new Point(182, 122);
             clearButton.Name = "clearButton";
             clearButton.Size = new Size(75, 75);
             clearButton.TabIndex = 18;
-            clearButton.Text = "AC";
+            clearButton.Text = "C";
             clearButton.UseVisualStyleBackColor = true;
             clearButton.Click += clearButton_Click;
+            // 
+            // backspcBtn
+            // 
+            backspcBtn.Font = new Font("Segoe UI", 20F);
+            backspcBtn.Location = new Point(263, 122);
+            backspcBtn.Name = "backspcBtn";
+            backspcBtn.Size = new Size(75, 75);
+            backspcBtn.TabIndex = 19;
+            backspcBtn.Text = "←";
+            backspcBtn.UseVisualStyleBackColor = true;
+            backspcBtn.Click += backspcBtn_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(357, 544);
+            Controls.Add(backspcBtn);
             Controls.Add(clearButton);
-            Controls.Add(nineButton);
-            Controls.Add(eightButton);
-            Controls.Add(sevenButton);
-            Controls.Add(fourButton);
-            Controls.Add(fiveButton);
-            Controls.Add(sixButton);
-            Controls.Add(threeButton);
-            Controls.Add(twoButton);
-            Controls.Add(oneButton);
-            Controls.Add(emptyButton);
-            Controls.Add(zeroButton);
-            Controls.Add(equalsButton);
-            Controls.Add(divideButton);
-            Controls.Add(multiplyButton);
-            Controls.Add(subtractButton);
-            Controls.Add(addButton);
-            Controls.Add(textBox1);
+            Controls.Add(nineBtn);
+            Controls.Add(eightBtn);
+            Controls.Add(sevenBtn);
+            Controls.Add(fourBtn);
+            Controls.Add(fiveBtn);
+            Controls.Add(sixBtn);
+            Controls.Add(threeBtn);
+            Controls.Add(twoBtn);
+            Controls.Add(oneBtn);
+            Controls.Add(decimalPtBtn);
+            Controls.Add(zeroBtn);
+            Controls.Add(equalsBtn);
+            Controls.Add(divideBtn);
+            Controls.Add(multiplyBtn);
+            Controls.Add(subtractBtn);
+            Controls.Add(addBtn);
+            Controls.Add(displayTxtBox);
             Name = "Form1";
             Text = "Calculator";
             Load += Form1_Load;
@@ -263,23 +293,24 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private Button addButton;
-        private Button subtractButton;
-        private Button multiplyButton;
-        private Button divideButton;
-        private Button equalsButton;
-        private Button zeroButton;
-        private Button emptyButton;
-        private Button oneButton;
-        private Button twoButton;
-        private Button threeButton;
-        private Button sixButton;
-        private Button fiveButton;
-        private Button fourButton;
-        private Button sevenButton;
-        private Button eightButton;
-        private Button nineButton;
+        private TextBox displayTxtBox;
+        private Button addBtn;
+        private Button subtractBtn;
+        private Button multiplyBtn;
+        private Button divideBtn;
+        private Button equalsBtn;
+        private Button zeroBtn;
+        private Button decimalPtBtn;
+        private Button oneBtn;
+        private Button twoBtn;
+        private Button threeBtn;
+        private Button sixBtn;
+        private Button fiveBtn;
+        private Button fourBtn;
+        private Button sevenBtn;
+        private Button eightBtn;
+        private Button nineBtn;
         private Button clearButton;
+        private Button backspcBtn;
     }
 }
